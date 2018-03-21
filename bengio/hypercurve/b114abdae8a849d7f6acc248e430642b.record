@@ -1,0 +1,2 @@
+{"atten_vec_size": 1200, "batch size": 64, "criteria": "valid bleu", "dropout": 0.5, "en_embedding": 800, "en_hidden": 800, "learning rate": 0.001, "zh_embedding": 800, "zh_hidden": 1000}
+bleu

@@ -1,0 +1,11 @@
+en_source=/data/xuwenshen/ai_challenge/data/valid/valid/valid.en-zh.en.sgm
+zh_ref=/data/xuwenshen/ai_challenge/data/valid/valid/valid.en-zh.zh.sgm
+zh_pred=/data/xuwenshen/ai_challenge/code/.../pred.sgm
+
+perl /data/xuwenshen/ai_challenge/code/evaluation/wrap_xml.pl zh $en_source Toy < /data/xuwenshen/ai_challenge/code/.../pred.txt >  $zh_pred
+perl /data/xuwenshen/ai_challenge/code/evaluation/mteval-v11b.pl -r $zh_ref -s $en_source -t $zh_pred
+
+
+en_test=/data/xuwenshen/ai_challenge/data/test/test.sgm
+zh_pred=/data/xuwenshen/ai_challenge/code/.../pred.sgm
+perl /data/xuwenshen/ai_challenge/code/evaluation/wrap_xml.pl zh $en_test Toy < /data/xuwenshen/ai_challenge/code/.../pred.txt >  $zh_pred
